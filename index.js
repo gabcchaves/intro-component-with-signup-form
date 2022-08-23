@@ -2,6 +2,10 @@
 
 // Validate form data
 function validateData() {
+	// Remove all error messages
+	let errorMsgs = document.querySelectorAll(".signup-container form small:not(form:last-child)");
+	for (let i = 0; i < errorMsgs.length; i++) { errorMsgs[i].remove(); }
+
 	// Handle inputs emptyness
 	let inputFields = document.querySelectorAll(".signup-container form input:not(input[type=submit])");
 	for (let i = 0; i < inputFields.length; i++) {
@@ -14,7 +18,14 @@ function validateData() {
 			errorMsg.style.fontWeight = "600";
 			errorMsg.textContent = inputFields[i].name + " cannot bet empty";
 			errorMsg.style.textAlign = "right";
+			errorMsg.style.fontStyle = "italic";
+			errorMsg.style.marginBottom = "5%";
+			errorMsg.id = i;
 			document.querySelector(".signup-container form").insertBefore(errorMsg, inputFields[i].nextSibling);
+			inputFields[i].style.marginBottom = "0";
+		} else {
+			inputFields[i].style.borderColor = "lightgray";
+			inputFields[i].style.marginBottom = "5%";
 		}
 	}
 
@@ -29,6 +40,7 @@ function validateData() {
 		errorMsg.style.fontWeight = "600";
 		errorMsg.textContent = "Looks like this is not an email";
 		errorMsg.style.textAlign = "right";
+		errorMsg.style.fontStyle = "italic";
 		errorMsg.id = "invalid-email";
 		document.querySelector(".signup-container form").insertBefore(
 			errorMsg,
