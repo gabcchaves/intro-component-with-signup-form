@@ -114,6 +114,7 @@ body section {
 	text-align: center;
 	font-size: 0.8em;
 	color: var(--grayish-blue);
+	font-weight: 600;
 }
 
 a {
