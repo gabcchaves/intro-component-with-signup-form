@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* Resettings */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-size: 1rem;
+}
+
+img, picture {
+	max-width: 100%;
+	display: block;
+	line-height: 0;
+}
+
+button, input, select, textarea {
+	font: inherit;
+}
+
+button {
+	all: unset;
+	cursor: pointer;
+}
+
+/* Colors */
+:root {
+	--red: hsl(0, 100%, 74%);
+	--green: hsl(154, 59%, 51%);
+	--blue: hsl(248, 32%, 49%);
+	--dark-blue: hsl(249, 10%, 26%);
+	--grayish-blue: hsl(246, 25%, 77%);
+}
+
+/* General settings */
+html, body {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	background-image: url("images/bg-intro-desktop.png");
+	background-size: 100%;
+	background-color: var(--red);
+	display: flex;
+	justify-content: space-evenly;
+	font-family: 'Poppins';
+	align-items: center;
+}
+
+body section {
+	width: 40%;
+}
+
+.signup-container {
+	border-radius: 10px;
+}
+
+.signup-container button {
+	background-color: var(--blue);
+	color: white;
+	text-align: center;
+	box-shadow: 0 8px 0 indianred;
+	border-radius: inherit;
+	width: 100%;
+	padding: 3% 0;
+	margin-bottom: 5%;
+}
+
+.signup-container button:hover {
+	filter: brightness(1.2);
+}
+
+.signup-container form {
+	width: 100%;
+	background-color: white;
+	border-radius: 10px;
+	box-shadow: 0 8px 0 indianred;
+	display: flex;
+	flex-direction: column;
+	padding: 7%;
+}
+
+.signup-container form input {
+	border: 1px solid lightgray;
+	border-radius: 5px;
+	margin-bottom: 5%;
+	padding: 4% 7%;
+	outline: none;
+	font-weight: 600;
+}
+
+.signup-container form input:not(input[type=submit]):focus {
+	border-color: var(--dark-blue);
+}
+
+.signup-container form input:not(input[type=submit]) {
+	color: var(--dark-blue);
+}
+
+.signup-container form input[type=submit] {
+	background-color: var(--green);
+	color: white;
+	border: none;
+	box-shadow: 0 5px 0 mediumseagreen;
+}
+
+.signup-container form input[type=submit]:hover {
+	filter: brightness(1.2);
+	cursor: pointer;
+}
+
+.signup-container form small {
+	text-align: center;
+	font-size: 0.8em;
+	color: var(--grayish-blue);
+}
+
+a {
+	color: var(--red);
+	text-decoration: none;
+	font-size: inherit;
+}
+
+.intro {
+	color: white;
+}
+
+h1 {
+	font-size: 3em;
+}
